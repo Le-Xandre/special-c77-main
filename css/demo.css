@@ -1,0 +1,224 @@
+
+@import url("https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d-float|font-effect-anaglyph");
+
+
+:root {
+  --ff-primary: Heebo, sans-serif;
+  --ff-secondary: Bungee, cursive;
+  --ff-accent: Bungee Shade, cursive;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: 1rem;
+  /* for demo purposes only */
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 100rem;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+.stacked {
+  display: grid;
+}
+
+.stacked > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.product-grid {
+  display: grid;
+  gap: 0.125rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.card {
+  aspect-ratio: 1 / 1.5;align-items: center;
+    align-self: auto;
+    justify-content: center;
+    text-align: center;
+  /* border: 3px solid hotpink; */
+}
+
+.card__content {
+  background: rgba(189, 189, 189, 0);
+  align-self: end;align-items: center;
+    align-self: auto;
+    justify-content: center;
+    text-align: center;
+  margin: 0.5rem 0.5rem 2rem;
+  padding: 0.5rem;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.338);
+}
+
+.card__title {
+  font-size: 1.25rem;
+  line-height: 1;align-items: center;
+    align-self: auto;
+    justify-content: center;
+    text-align: center;
+  color: rgba(207, 255, 252, 0.924);
+  text-shadow: 0 0.25rem 1rem rgba(247, 223, 43, 0.78);
+}
+
+.card__price {
+  font-size: 1.35rem;align-items: center;
+    align-self: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.card__img {
+  width: 100%;
+  aspect-ratio: 1 / 1.25;align-items: center;
+    align-self: auto;
+    justify-content: center;
+    text-align: center;
+  object-fit: cover;
+}
+
+@media (min-width: 60em) {
+  .card__img {
+    aspect-ratio: 1 / 1;
+  }
+
+  .card.featured {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+
+  .card.featured .card__img {
+    aspect-ratio: 1 / 1.25;
+  }
+
+  .card.featured .card__title {
+    font-size: 1.75rem;
+  }
+}
+
+.main-title {
+  font-size: clamp(2rem, 5vw + 1rem, 5rem);
+  line-height: 1;
+  color: white;
+  background: linear-gradient(-45deg, rgba(160, 231, 246, 0.882), rgba(241, 134, 232, 0.694));
+  padding: 0.125em 0.5em;
+  text-shadow: 0 0.25rem .25rem rgba(0, 0, 0, 0.669);
+  margin-bottom: 1em;
+  width: auto;
+  align-items: center;
+    align-self: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+p.max-content {
+  width: max-content;align-items: center;
+    align-self: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+p.min-content {
+  width: min-content;align-items: center;
+    align-self: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  text-shadow: rgb(0, 0, 0);
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--ff-secondary);  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  text-rendering: optimizeSpeed;
+  /* scroll-behavior: smooth; */
+}
+
+/* Set core body defaults */
+body {
+
+  text-rendering: optimizeSpeed;
+  line-height: 1.25;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;align-items: center;
+    align-self: auto;
+    justify-content: center;
+    text-align: center;
+}
