@@ -34,6 +34,23 @@
   --seconde-color:rgba(170, 25, 12, 0.991);
   --third-color:rgb(9, 142, 34);
 
+  --first-hue: 201;
+    --sat: 55%;
+  --lig: 55%;
+
+  --second-hue: 235;
+
+  --first-color: hsla(var(--first-hue), var(--sat), var(--lig));
+  --first-color-alt: hsla(var(--second-hue), var(--sat), 71%); /* -4% */
+  --title-color: hsla(var(--second-hue), 75%, 55%);
+  --text-color: hsla(var(--first-hue), 8%, 75%);
+  --text-color-light: hsla(var(--second-hue), 4%, 55%);
+  --container-color: hsla(var(--second-hue), 32%, 12%);
+  --blanc: #c7c7c7fd;
+  --noir: #000002;
+  --gris-transparent: #42404081;
+  --body-color: #3e370b9a;
+
   --text-color-light-01: rgb(5, 134, 1);
   --text-color-light-02: rgb(209, 200, 14);
   --text-color-light-03: rgb(255, 153, 0);
@@ -112,23 +129,6 @@
   --small-font-size: .813rem;
   --smaller-font-size: .75rem;
   --tiny-font-size: .625rem;
-
-  --first-hue: 201;
-    --sat: 55%;
-  --lig: 55%;
-
-  --second-hue: 235;
-
-  --first-color: hsla(var(--first-hue), var(--sat), var(--lig));
-  --first-color-alt: hsla(var(--second-hue), var(--sat), 71%); /* -4% */
-  --title-color: hsla(var(--second-hue), 75%, 55%);
-  --text-color: hsla(var(--first-hue), 8%, 75%);
-  --text-color-light: hsla(var(--second-hue), 4%, 55%);
-  --container-color: hsla(var(--second-hue), 32%, 12%);
-  --blanc: #c7c7c7fd;
-  --noir: #000002;
-  --gris-transparent: #42404081;
-  --body-color: #3e370b9a;
 
 
   --smaller-font-size: .50rem;
